@@ -1,13 +1,15 @@
-body, html {
+body,
+html {
   -webkit-font-smoothing: antialiased;
   color: #444;
-  font-family: "gotham-light", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
-  font-size: 1.0rem;
+  font-family: 'gotham-light', 'Helvetica Neue', 'Helvetica', 'Roboto', 'Arial',
+    sans-serif;
+  font-size: 1rem;
   line-height: 1.5rem;
 }
 
 h1 {
-  font-size: 2.0rem;
+  font-size: 2rem;
   line-height: 2.5rem;
   color: #f28e24;
   letter-spacing: 0.2em;
@@ -37,7 +39,7 @@ ul li {
 }
 
 .container {
-  padding: 2.0rem 1.1rem;
+  padding: 2rem 1.1rem;
 }
 
 .capitalized {

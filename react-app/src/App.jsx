@@ -5,10 +5,10 @@ import CoursesContainer from './components/CoursesContainer'
 
 const App = () => {
   return (
-    <> 
-    <Header />
-    <CoursesContainer />
-    </>
+    <div className='container' id='app'>
+      <Header />
+      <CoursesContainer />
+    </div>
   )
 }
 
