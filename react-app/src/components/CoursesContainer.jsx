@@ -4,7 +4,9 @@ import Course from './Course'
 
 const CoursesContainer = ({ activeCategory }) => {
   const listOfCourses = courses
-    .filter((course) => course.category === activeCategory)
+    .filter((course) =>
+      activeCategory === 'all' ? true : course.category === activeCategory
+    )
     .map((course) => {
       return <Course key={course.title} course={course} />
     })

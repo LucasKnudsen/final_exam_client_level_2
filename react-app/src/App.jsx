@@ -1,10 +1,10 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import './styles/style.css'
 import Header from './components/Header'
 import CoursesContainer from './components/CoursesContainer'
 
 const App = () => {
-  const [activeCategory, setActiveCategory] = useState()
+  const [activeCategory, setActiveCategory] = useState('all')
 
   return (
     <div className='container' id='app'>

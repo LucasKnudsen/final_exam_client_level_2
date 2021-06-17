@@ -26,8 +26,15 @@ const Header = ({ setActiveCategory }) => {
 
   return (
     <>
-      <h1>Course list</h1>
-      <ul data-cy='nav-bar'>{menuList}</ul>
+      <h1 className='center'>Course list</h1>
+      <ul data-cy='nav-bar' className='center'>
+        <li
+          onClick={() => setActiveCategory('all')}
+          className='capitalized bold'>
+          all
+        </li>
+        {menuList}
+      </ul>
     </>
   )
 }
