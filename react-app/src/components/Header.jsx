@@ -1,17 +1,8 @@
 import React from 'react'
 import { courses } from '../data/courses'
+import { removeDublicates } from './modules/helperFunctions'
 
 const Header = ({ setActiveCategory }) => {
-  const removeDublicates = (list) => {
-    let categories = []
-    list.forEach((course) => {
-      if (categories.indexOf(course.category) === -1) {
-        categories.push(course.category)
-      }
-    })
-    return categories
-  }
-
   const menuList = removeDublicates(courses).map((category) => {
     return (
       <li
