@@ -1,8 +1,8 @@
 import React from 'react'
 import { courses } from '../data/courses'
 
-const Header = () => {
-  const categoriesArray = (list) => {
+const Header = ({ setActiveCategory }) => {
+  const removeDublicates = (list) => {
     let categories = []
     list.forEach((course) => {
       if (categories.indexOf(course.category) === -1) {
@@ -12,8 +12,16 @@ const Header = () => {
     return categories
   }
 
-  const menuList = categoriesArray(courses).map((category) => {
-    return <li className='capitalized bold'>{category}</li>
+  const menuList = removeDublicates(courses).map((category) => {
+    return (
+      <li
+        onClick={() => {
+          setActiveCategory(category)
+        }}
+        className='capitalized bold'>
+        {category}
+      </li>
+    )
   })
 
   return (
